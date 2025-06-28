@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Bautizo</title>
+    <meta property="og:url" content="">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="">
+    <meta property="og:description" content="">
+    <meta property="og:image" content="">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="preload" href="/imagenes/53.png" as="image">
+     <!-- Preconnect and Load Fonts -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap" rel="stylesheet">
+     <script src="https://cdn.lordicon.com/lordicon.js"></script>   
+</head>
+<body>
+    <!-- Sobre de la Invitación -->
+    <div id="envelope">
+        <div id="envelope-top"></div>
+        <div id="seal">
+            <h2 class="fade-in-element visible" style="transition-delay: 0s;">Mi Bautizo</h2>
+        </div>
+        <div id="envelope-bottom"></div>
+    </div>
+    <!-- Contenido de la Invitación -->
+    <div id="invitacion">
+        <!--Header-->
+        <header class="sintillo">
+            <h1>Mi Bautizo</h1>
+            <h2>Emiliano</h2>
+        </header>
+        <!-- Sección de Foto -->
+        <div class="section-main fade-in-element">
+            <img src="/imagenes/v2.jpg" alt="Foto de la quinceañera" width="100%">
+        </div>
+        <!--div cerezo-->
+        <div class="section-cerezo0"></div> 
+        <!-- Contador de Fecha Regresiva -->
+        <div class="section-countdown fade-in-element">
+            <h1>¡Están invitados!</h1>
+            <p>Nos encanta que sean parte de este momento tan especial para nosotros.</p>
+            <h2>21 . 06 . 2025</h2>
+            <div id="contador">
+                <div class="countdown-circle">
+                    <span id="dias">00</span>
+                    <span>días</span>
+                </div>
+                <div class="countdown-circle">
+                    <span id="horas">00</span>
+                    <span>horas</span>
+                </div>
+                <div class="countdown-circle">
+                    <span id="minutos">00</span>
+                    <span>minutos</span>
+                </div>
+                <div class="countdown-circle">
+                    <span id="segundos">00</span>
+                    <span>segundos</span>
+                </div>
+            </div>
+             <!-- Agregar al Calendario -->
+              <div class="section-calendar">
+                <a target="_blank" href="https://www.google.com/calendar/render?action=TEMPLATE&text=Fiesta+de+XV+Años+de+Belén&dates=20250621T190000Z/20250622T020000Z&details=Te+esperamos+para+celebrar+esta+gran+ocasión&location=Salón+de+Eventos,+Ciudad+de+Guatemala&sf=true&output=xml">Agregar al calendario</a>
+              </div>
+        </div>  
+        <!-- Música de fondo -->
+        <div class="section-music fade-in-element">
+            <h2>"Aleluya"</h2>
+          <audio id="musica" controls loop>
+             <source src="/Aleluya (Violín).mp3" type="audio/mpeg">
+             Tu navegador no soporta la reproducción de audio.
+          </audio>
+        </div>   
+        <!--div cerezo-->
+        <div class="section-cerezo"></div>   
+         <!-- Bendición de Padres -->
+         <div class="section-b fade-in-element">
+            <p>Con la bendición de Dios y de mis padres</p>
+            <h1>Camila Cruz</h1>
+            <h2>&</h2>
+            <h1>Diego Durango</h1>
+        </div>
+           <!-- Nombre de Invitados y Cantidad de Pases -->
+           <div class="section fade-in-element">
+            <h1>Los invitamos con mucho cariño</h1>
+            <h3 id="nombreInvitado"></h3>
+            <h3 id="cantidadPases"></h3>
+        </div>
+         <!--imagen-->
+         <div class="section fade-in-element">
+            <img src="/imagenes/v3.jpg" alt="Foto de la quinceañera" width="100%" loading="lazy">
+        </div>
+        <!-- Itinerario -->
+        <div class="section fade-in-element">
+          <!--card ceremonia-->
+            <div class="ceremony fade-in-element">
+                <lord-icon
+                 src="https://cdn.lordicon.com/jqmftaai.json"
+                 trigger="loop"
+                 delay="2000"
+                 stroke="light"
+                 colors="primary:#D2B48C,secondary:#B0C4DE"
+                 style="width:200px;height:200px">
+               </lord-icon>
+               <h2>Ceremonia</h2>
+               <p>Iglesia de la Merced</p>
+               <div class="details">
+                   <div class="time-location">
+                     <span class="date"> 21 Junio</span>
+                     <span class="separator">|</span>
+                     <span class="time">17:00 hrs</span>
+                  </div>
+                     <p>1a Calle Poniente, Antigua Guatemala</p>
+                     <button type="button" class="direction-button" onclick="elegirAplicacion()">Cómo llegar</button>
+               </div>
+            </div>
+         <!--card fiesta-->
+           <div class="party fade-in-element">
+            <lord-icon
+             src="https://cdn.lordicon.com/nsgykrsg.json"
+             trigger="loop"
+             delay="2000"
+             stroke="light"
+             colors="primary:#D2B48C,secondary:#B0C4DE"
+             style="width:200px;height:200px">
+            </lord-icon>
+           <h2>Fiesta</h2>
+           <p>Camino Real Antigua</p>
+           <div class="details">
+            <div class="time-location">
+                <span class="date"> 21 Junio</span>
+                <span class="separator">|</span>
+                <span class="time">18:30 hrs</span>
+            </div>
+        <p>7a Calle Poniente 33b Antigua Guatemala</p>
+        <button type="button" class="direction-button" onclick="elegirAplicacionOtraDireccion()">Cómo llegar</button>
+           </div>
+           </div>
+        </div>
+        <!--div cerezo-->
+        <div class="section-cerezo1"></div>
+         <!--imagen-->
+         <div class="section fade-in-element">
+            <img src="/imagenes/v1.jpg" alt="Foto de la quinceañera" width="100%" loading="lazy">
+        </div>
+        <!--div cerezo-->
+        <div class="section-cerezo2"></div>   
+       <!-- Galería de Fotos -->
+       <div class="section fade-in-element">
+           <h2>Galería</h2>
+           <div class="galeria">
+             <img src="/imagenes/h1.jpg" alt="Foto 1" class="galeria-imagen" onclick="changePhoto(this)" loading="lazy">
+             <img src="/imagenes/h2.jpg" alt="Foto 2" class="galeria-imagen" onclick="changePhoto(this)" loading="lazy">
+             <img src="/imagenes/v2.jpg" alt="Foto 3" class="galeria-imagen" onclick="changePhoto(this)" loading="lazy">
+             <img src="/imagenes/v4.jpg" alt="Foto 4" class="galeria-imagen" onclick="changePhoto(this)" loading="lazy">
+           </div>
+        </div>
+        <!-- Modal para visualización de fotos -->
+        <div id="photo-modal" class="photo-modal" onclick="closeModal(event)">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <img id="main-photo-modal" src="" alt="Imagen ampliada">
+        </div>
+                <!-- Confirmación -->
+                <div class="section fade-in-element">
+                    <h3>Confirmar Asistencia</h3>
+                    <lord-icon
+                     src="https://cdn.lordicon.com/fjvfsqea.json"
+                     trigger="loop"
+                     delay="2000"
+                     stroke="light"
+                     colors="primary:#D2B48C,secondary:#B0C4DE"
+                     style="width:200px;height:200px">
+                   </lord-icon>
+                   <p>Para nosotros es muy importante que confirmes tu asistencia antes del 05 de Junio, o bien indicarnos si no podrás acompañarnos.</p>
+                    <button onclick="confirmarAsistencia()">Confirmar</button>
+                    <div id="confirmacion"></div>
+                </div>
+        <!-- Imagen -->
+        <div class="section fade-in-element">
+            <img src="/imagenes/v5.jpg" alt="Foto de la quinceañera" width="100%" loading="lazy">
+        </div>
+        <!-- frase final-->
+        <div class="section-quote fade-in-element">
+            <h1>Tu presencia es el mejor regalo. Nos sentimos bendecidos de compartir este día tan especial contigo.</h1>
+        </div>
+        <!-- Footer -->
+        <footer>
+            <div class="section-social-icons fade-in-element">
+                <a href="https://www.facebook.com/thetwodesign" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/thetwodesign/" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://wa.me/50236011737" target="_blank"><i class="fab fa-whatsapp"></i></a>
+            </div>
+            <div class="section-logo">
+                <img src="/Imagenes/2.png" alt="Logo" width="100" loading="lazy">
+            </div>
+        </footer>
+    </div>
+    <script src="/script.js"></script>
+</body>
+</html>
