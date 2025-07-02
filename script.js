@@ -67,7 +67,7 @@ function cargarDatosInvitado() {
 
 // Función para iniciar el contador de la fecha del evento
 function iniciarContador() {
-    const eventoFecha = new Date("June 21, 2025 00:00:00").getTime();
+    const eventoFecha = new Date("July 26, 2025 00:00:00").getTime();
 
     setInterval(() => {
         const ahora = new Date().getTime();
@@ -133,8 +133,8 @@ function confirmarAsistencia() {
     const invitado = "Ana Pérez"; 
     const pases = 3; 
 
-    const mensaje = `Hola, soy ${invitado} y confirmo mi asistencia con ${pases} pases para la fiesta de quince años de Belén.`;
-    const numeroTelefono = '50236011737';
+    const mensaje = `Hola, soy ${invitado} y confirmo mi asistencia con ${pases} al Bautizo de Thiago.`;
+    const numeroTelefono = '50233564329';
 
     const enlaceWhatsapp = `https://api.whatsapp.com/send?phone=${numeroTelefono}&text=${encodeURIComponent(mensaje)}`;
     window.open(enlaceWhatsapp, '_blank');
@@ -143,7 +143,7 @@ function confirmarAsistencia() {
 // Función para abrir Waze o Google Maps
 function elegirAplicacion() {
     const enlaceGoogleMaps = 'https://maps.app.goo.gl/dfD9cMEbSAdn56qV8';
-    const enlaceWaze = 'https://waze.com/ul?ll=14.558065,-90.729567&navigate=yes';
+    const enlaceWaze = 'https://www.waze.com/en/live-map/directions/iglesia-la-merced-la-antigua-guatemala?place=w.176488594.1764689328.480633';
 
     window.open(enlaceGoogleMaps, '_blank');
     setTimeout(() => {
@@ -152,8 +152,8 @@ function elegirAplicacion() {
 }
 
 function elegirAplicacionOtraDireccion() {
-    const enlaceGoogleMaps = 'https://maps.app.goo.gl/YokAqLQi9DA7hXXs8';
-    const enlaceWaze = 'https://waze.com/ul?ll=14.558065,-90.729567&navigate=yes';
+    const enlaceGoogleMaps = 'https://maps.app.goo.gl/NnCguYMBKCZbxJh97';
+    const enlaceWaze = 'https://waze.com/ul/h9fx77cwc9 ';
 
     window.open(enlaceGoogleMaps, '_blank');
     setTimeout(() => {
