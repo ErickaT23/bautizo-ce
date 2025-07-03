@@ -35,9 +35,12 @@
             <h2>Thiago Xavier</h2>
             <h3>Ramírez Ávila</h3>
         </header>
+        <div id="desliza-senal" class="fade-in-element">
+            <p>Desliza hacia arriba 👆</p>
+          </div>          
         <!-- Sección de Foto -->
         <div class="section-main fade-in-element">
-            <img src="/imagenes/G1.png" alt="Foto Bautizo" width="100%">
+            <img src="/imagenes/mi-bautizo.png" alt="Foto Bautizo" width="100%">
         </div>
         <!-- Contador de Fecha Regresiva -->
         <div class="section-countdown fade-in-element">
@@ -77,37 +80,43 @@
         </div>   
         <!--div cerezo-->
         <div class="section-cerezo"></div>
+
+        <!-- Frase especial -->
+        <div class="section fade-in-element frase-especial">
+             <p>“Ha llegado el momento para que los ángeles me protejan y me mantengan a salvo en el camino de la fe.”</p>
+        </div>
         <!-- Mensaje de los padres -->
          <div class="section-fathers fade-in-element">
-            <h2>Mis Padres</h2>
+            <h2>Con mis padres:</h2>
             <h1>Pauliny Ramírez</h1>
             <h2>&</h2>
             <h1>Byanka Ávila de Ramírez</h1>
         </div>
          <!--imagen-->
          <div class="section fade-in-element">
-            <img src="/imagenes/H3.png" alt="Foto del bebe" width="100%" loading="lazy">
+            <img src="/imagenes/bebe-padres.png" alt="Foto del bebe" width="100%" loading="lazy">
         </div>
+
         <!-- Mensaje de los padrinos -->
         <div class="section-godparents fade-in-element">
-            <h2>Mis Padrinos</h2>
+            <h2>Mis Padrinos:</h2>
             <h1>Jahiro Otzoy</h1>
             <h2>&</h2>
             <h1>Elka Otzoy</h1>
         </div>
         <!--imagen-->
         <div class="section fade-in-element">
-            <img src="/imagenes/H2.png" alt="Foto del bebe" width="100%" loading="lazy">
+            <img src="/imagenes/bebe-carro.png" alt="Foto del bebe" width="100%" loading="lazy">
         </div>
            <!-- Nombre de Invitados y Cantidad de Pases -->
            <div class="section fade-in-element">
-            <h1>Los invitamos con mucho cariño</h1>
+            <h1>Los invitamos con mucho cariño:</h1>
             <h3 id="nombreInvitado"></h3>
             <h3 id="cantidadPases"></h3>
         </div>
          <!--imagen-->
          <div class="section fade-in-element">
-            <img src="/imagenes/H1.png" alt="Foto de la quinceañera" width="100%" loading="lazy">
+            <img src="/imagenes/bebe-mickey.png" alt="Foto del bebe" width="100%" loading="lazy">
         </div>
         <!-- Itinerario -->
         <div class="section fade-in-element">
@@ -156,9 +165,27 @@
            </div>
            </div>
         </div>
-        <!--div cerezo-->
-        <div class="section-cerezo1"></div>
-         <!--imagen-->
+                <!-- Confirmación -->
+      <div class="section fade-in-element">
+        <h3>Confirmar Asistencia</h3>
+         <lord-icon
+          src="https://cdn.lordicon.com/fjvfsqea.json"
+          trigger="loop"
+          delay="2000"
+          stroke="light"
+          colors="primary:#D2B48C,secondary:#9c825f"
+          style="width:200px;height:200px">
+        </lord-icon>
+        <p>Su presencia es muy importante para nosotros y por razones de protocolo y organización, es necesaria  su confirmación antes del día 16 de julio del 2025 o bien indicarnos si esta vez no podrán acompañarnos. </p>
+        <div class="button-group">
+            <button onclick="confirmarAsistencia('mamá', '50250045319')">Mamá</button>
+            <button onclick="confirmarAsistencia('papá', '50233564329')">Papá</button>            
+        </div>
+        <div id="confirmacion"></div>
+      </div>
+      <div class="section fade-in-element">
+        <img src="/imagenes/bebe-lenador.png" alt="Foto del bebe" width="100%" loading="lazy">
+    </div>
          <!--Regalo-->
          <div class="section-regalo fade-in-element">
             <lord-icon
@@ -173,38 +200,74 @@
            <p>Su presencia es mi mayor regalo, pero si me quieres dar algún obsequio puedes llevarlo el día del evento y si se trata de ropa, actualmente uso talla 24 meses. </p>
         </div>
         <!--Codigo de vestimenta-->
-         <div class="section-regalo fade-in-element">
-            <lord-icon
-             src="https://cdn.lordicon.com/xkbbchys.json"
-             trigger="loop"
-             delay="2000"
-             stroke="light"
-             colors="primary:#D2B48C,secondary:#9c825f"
-             style="width:200px;height:200px">
-           </lord-icon>
-           <h2>Código de Vestimenta</h2>
-           <p>Formal</p>
-        </div>
+          <div class="section-regalo fade-in-element">
+             <img src="/imagenes/dresscode.png" alt="Código de vestimenta" style="width: 200px; height: auto;" loading="lazy">
+             <h2>Código de Vestimenta</h2>
+             <p>Formal</p>
+          </div>
          <div class="section fade-in-element">
-            <img src="/imagenes/G1.png" alt="Foto del bebe" width="100%" loading="lazy">
+            <img src="/imagenes/bebe-celeste.png" alt="Foto del bebe" width="100%" loading="lazy">
         </div>
         <!--div cerezo-->
        <!-- Galería de Fotos -->
-       <div class="section fade-in-element">
-           <h2>Galería</h2>
-           <div class="galeria">
-             <img src="/imagenes/G1.png" alt="Foto 1" class="galeria-imagen" onclick="changePhoto(this)" loading="lazy">
-             <img src="/imagenes/G2.png" alt="Foto 2" class="galeria-imagen" onclick="changePhoto(this)" loading="lazy">
-             <img src="/imagenes/G3.png" alt="Foto 3" class="galeria-imagen" onclick="changePhoto(this)" loading="lazy">
-             <img src="/imagenes/G4.png" alt="Foto 4" class="galeria-imagen" onclick="changePhoto(this)" loading="lazy">
-             <img src="/imagenes/G5.png" alt="Foto 5" class="galeria-imagen" onclick="changePhoto(this)" loading="lazy">
-             <img src="/imagenes/G6.png" alt="Foto 6" class="galeria-imagen" onclick="changePhoto(this)" loading="lazy">
-             <img src="/imagenes/G7.png" alt="Foto 7" class="galeria-imagen" onclick="changePhoto(this)" loading="lazy">
-             <img src="/imagenes/G8.png" alt="Foto 8" class="galeria-imagen" onclick="changePhoto(this)" loading="lazy">
-             <img src="/imagenes/G9.png" alt="Foto 9" class="galeria-imagen" onclick="changePhoto(this)" loading="lazy">
-             <img src="/imagenes/G10.png" alt="Foto 10" class="galeria-imagen" onclick="changePhoto(this)" loading="lazy">
-           </div>
+       <!-- Galería de Fotos -->
+<div class="section fade-in-element">
+    <h2>Galería</h2>
+
+    <!-- Vista de carpetas -->
+    <div class="galeria-carpetas">
+        <div class="carpeta" onclick="mostrarCategoria('bebe')">
+            <img src="/imagenes/bebe.png" alt="bebe" loading="lazy">
+            <span>De Bebé</span>
         </div>
+        <div class="carpeta" onclick="mostrarCategoria('cotidianidad')">
+            <img src="/imagenes/cotidianidad.png" alt="cotidianidad" loading="lazy">
+            <span>Mi cotidianidad</span>
+        </div>
+        <div class="carpeta" onclick="mostrarCategoria('mickey')">
+            <img src="/imagenes/mickey.png" alt="mickey" loading="lazy">
+            <span>Disfrazado de Mickey</span>
+        </div>
+        <div class="carpeta" onclick="mostrarCategoria('patodonald')">
+            <img src="/imagenes/patodonald.png" alt="patodonald" loading="lazy">
+            <span>Disfrazado de Pato Donald</span>
+        </div>
+    </div>
+
+    <!-- Contenedor galería -->
+    <div class="galeria oculto" id="galeria-bebe">
+        <img src="/imagenes/bebe.png" alt="Foto ceremonia 1" class="galeria-imagen" onclick="changePhoto(this)" loading="lazy">
+        <img src="/imagenes/b1.png" alt="Foto ceremonia 2" class="galeria-imagen" onclick="changePhoto(this)" loading="lazy">
+        <img src="/imagenes/b2.png" alt="Foto ceremonia 2" class="galeria-imagen" onclick="changePhoto(this)" loading="lazy">
+        <img src="/imagenes/b3.png" alt="Foto ceremonia 2" class="galeria-imagen" onclick="changePhoto(this)" loading="lazy">
+        <img src="/imagenes/b4.png" alt="Foto ceremonia 2" class="galeria-imagen" onclick="changePhoto(this)" loading="lazy">
+    </div>
+
+    <div class="galeria oculto" id="galeria-cotidianidad">
+        <img src="/imagenes/cotidianidad.png" alt="Foto ceremonia 1" class="galeria-imagen" onclick="changePhoto(this)" loading="lazy">
+        <img src="/imagenes/c1.png" alt="Foto ceremonia 2" class="galeria-imagen" onclick="changePhoto(this)" loading="lazy">
+        <img src="/imagenes/c2.png" alt="Foto ceremonia 2" class="galeria-imagen" onclick="changePhoto(this)" loading="lazy">
+        <img src="/imagenes/c3.png" alt="Foto ceremonia 2" class="galeria-imagen" onclick="changePhoto(this)" loading="lazy">
+        <img src="/imagenes/c4.png" alt="Foto ceremonia 2" class="galeria-imagen" onclick="changePhoto(this)" loading="lazy">
+    </div>
+
+    <div class="galeria oculto" id="galeria-mickey">
+        <img src="/imagenes/mickey.png" alt="Foto recepción 1" class="galeria-imagen" onclick="changePhoto(this)" loading="lazy">
+        <img src="/imagenes/m1.png" alt="Foto recepción 2" class="galeria-imagen" onclick="changePhoto(this)" loading="lazy">
+        <img src="/imagenes/m2.png" alt="Foto recepción 2" class="galeria-imagen" onclick="changePhoto(this)" loading="lazy">
+        <img src="/imagenes/m3.png" alt="Foto recepción 2" class="galeria-imagen" onclick="changePhoto(this)" loading="lazy">
+        <img src="/imagenes/m4.png" alt="Foto recepción 2" class="galeria-imagen" onclick="changePhoto(this)" loading="lazy">
+    </div>
+
+    <div class="galeria oculto" id="galeria-patodonald">
+        <img src="/imagenes/patodonald.png" alt="Foto familia 1" class="galeria-imagen" onclick="changePhoto(this)" loading="lazy">
+        <img src="/imagenes/pd1.png" alt="Foto familia 2" class="galeria-imagen" onclick="changePhoto(this)" loading="lazy">
+        <img src="/imagenes/pd2.png" alt="Foto familia 2" class="galeria-imagen" onclick="changePhoto(this)" loading="lazy">
+        <img src="/imagenes/pd3.png" alt="Foto familia 2" class="galeria-imagen" onclick="changePhoto(this)" loading="lazy">
+        <img src="/imagenes/pd4.png" alt="Foto familia 2" class="galeria-imagen" onclick="changePhoto(this)" loading="lazy">
+    </div>
+</div>
+
         <!-- Modal para visualización de fotos -->
         <div id="photo-modal" class="photo-modal" onclick="closeModal(event)">
             <span class="close" onclick="closeModal()">&times;</span>
@@ -220,29 +283,10 @@
                 <a href="https://drive.google.com/drive/folders/1cbohfGdF9V2tLGxHKZrmIw4T438ijpO9?usp=sharing" target="_blank" class="upload-button">Subir fotos al álbum</a>
             </div>
             </div>
-        <!-- Confirmación -->
-      <div class="section fade-in-element">
-       <h3>Confirmar Asistencia</h3>
-        <lord-icon
-         src="https://cdn.lordicon.com/fjvfsqea.json"
-         trigger="loop"
-         delay="2000"
-         stroke="light"
-         colors="primary:#D2B48C,secondary:#9c825f"
-         style="width:200px;height:200px">
-       </lord-icon>
-       <p>Su presencia es muy importante para nosotros y por razones de protocolo y organización, es necesaria  su confirmación antes del día 16 de julio del 2025 o bien indicarnos si esta vez no podrán acompañarnos. </p>
-       <div class="button-group">
-         <button onclick="confirmarAsistencia('mamá')">Mamá</button>
-         <button onclick="confirmarAsistencia('papá')">Papá</button>
-       </div>
-    <div id="confirmacion"></div>
-</div>
         <!-- Imagen -->
         <div class="section fade-in-element">
-            <img src="/imagenes/H2.png" alt="Foto del bebe" width="100%" loading="lazy">
+            <img src="/imagenes/bebe-patodonald.png" alt="Foto del bebe" width="100%" loading="lazy">
         </div>
-
         <!-- frase final-->
         <div class="section-quote fade-in-element">
             <h1>Gracias por ser parte de este momento único.</h1>

@@ -129,16 +129,16 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 // Función para confirmar la asistencia
-function confirmarAsistencia() {
-    const invitado = "Ana Pérez"; 
-    const pases = 3; 
+function confirmarAsistencia(destinatario, numeroTelefono) {
+    const invitado = "Ana Pérez";  // Esto lo puedes hacer dinámico si quieres
+    const pases = 3;               // Igual aquí si quieres usar el dato real del invitado
 
     const mensaje = `Hola, soy ${invitado} y confirmo mi asistencia con ${pases} al Bautizo de Thiago.`;
-    const numeroTelefono = '50233564329';
-
+    
     const enlaceWhatsapp = `https://api.whatsapp.com/send?phone=${numeroTelefono}&text=${encodeURIComponent(mensaje)}`;
     window.open(enlaceWhatsapp, '_blank');
 }
+
 
 // Función para abrir Waze o Google Maps
 function elegirAplicacion() {
@@ -160,3 +160,32 @@ function elegirAplicacionOtraDireccion() {
         window.open(enlaceWaze, '_blank');
     }, 1000);
 }
+//senal
+// Ocultar la señal tras 5 segundos
+setTimeout(() => {
+    const senal = document.getElementById('desliza-senal');
+    if (senal) {
+        senal.style.display = 'none';
+    }
+}, 20000);
+
+// O si prefieres al detectar scroll
+/*document.addEventListener('scroll', () => {
+    const senal = document.getElementById('desliza-senal');
+    if (senal) {
+        senal.style.display = 'none';
+    }
+});*/
+
+function mostrarCategoria(categoria) {
+    // Ocultar todas las galerías
+    const galerias = document.querySelectorAll('.galeria');
+    galerias.forEach(g => g.classList.add('oculto'));
+
+    // Mostrar la galería seleccionada
+    const galeriaSeleccionada = document.getElementById(`galeria-${categoria}`);
+    if (galeriaSeleccionada) {
+        galeriaSeleccionada.classList.remove('oculto');
+    }
+}
+

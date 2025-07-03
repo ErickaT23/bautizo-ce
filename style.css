@@ -218,8 +218,8 @@ body {
     color: var(--color-2);
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
     font-family: var(--font-text);
-    font-size: 1.5em;
-    font-weight: 400;
+    font-size: 2.7em;
+    font-weight:500;
     font-style: italic;
     padding: 5px;
     margin: 0;
@@ -638,6 +638,88 @@ footer {
 .section-logo img{
     margin-top: 0px;
 }
+/*frase especial*/
+.frase-especial p {
+    background: linear-gradient(to right, #b29a68, #d4af37, #ffd700, #d4af37, #b29a68);
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: shine 1.5s infinite linear;
+    font-family: 'Playfair', serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 32px;
+    padding: 10px;
+    margin: 0;
+}
+#desliza-senal {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(210, 180, 140, 0.893); /* Tan semi-transparente */
+    padding: 10px 10px;
+    border-radius: 20px;
+    z-index: 999;
+    font-family: var(--font-text);
+    font-style: italic;
+    font-size: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    animation: desliza-brillo 1.5s infinite;
+}
+#desliza-senal p{
+    color: white;
+}
+@keyframes desliza-brillo {
+    from { opacity: 0.7; }
+    to { opacity: 1; }
+}
+.galeria-carpetas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.carpeta {
+    position: relative;
+    cursor: pointer;
+    width: 200px;
+    height: 150px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: transform 0.3s;
+}
+
+.carpeta img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.1;
+    margin-top: 0;
+}
+
+.carpeta span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: var(--font-text);
+    font-style: italic;
+    font-size: 2rem;
+    color:var(--color-2);
+    font-weight: 500;
+}
+
+.carpeta:hover {
+    transform: scale(1.05);
+}
+
+.oculto {
+    display: none;
+}
+
 /* Media Queries */
 @media (min-width: 768px) and (max-width: 1024px) {
     /* iPad Styles */
