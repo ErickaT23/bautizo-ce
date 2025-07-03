@@ -151,14 +151,3 @@ function mostrarCategoria(categoria) {
 }
 
 //opitmización de imágenes
-setTimeout(() => {
-    envelope.style.display = 'none';
-    invitacion.style.display = 'block';
-}, 1000);
-
-setTimeout(() => {
-    if (musica.paused) {
-        musica.play();
-    }
-}, 1100);
-invitacion.classList.add('invitacion-visible');
