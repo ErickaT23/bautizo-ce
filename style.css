@@ -886,4 +886,7 @@ footer {
     transform: translateY(0);
 }
 
-
+.invitacion-visible {
+    display: block;
+  }
+  
