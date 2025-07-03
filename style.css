@@ -54,24 +54,28 @@ body {
     background-position: center;
     background-repeat: no-repeat;
 }
+/*sello*/
 /* Sello del sobre */
 #seal {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 180px;
-    height: 180px;
-    background-color:#aa906d;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.216);
-    border-radius: 50%;
+    height: 245px;
+    width: 250px;
+    background-image: url(/imagenes/SEAL-ANGELITO.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
     transition: opacity 1s ease-in-out;
-    z-index: 11; /* El círculo rosa encima de la rosa */
+    z-index: 11;
+    text-align: center;
 }
+
 /* Texto dentro del sello */
 #seal h2 {
     margin: 0;
@@ -82,7 +86,7 @@ body {
     font-style: normal;
     z-index: 12; /* Texto encima de todo */
     position: relative;
-    font-size: 29px;
+    font-size: 36px;
 }
 #invitacion {
     display: none;
@@ -298,15 +302,15 @@ body {
 /*seccion padre*/
 .section-fathers, .section-godparents{
     font-family: var(--font-text);
-    padding: 20px 20px;
     margin-bottom: -40px;
     margin-top: -5px;
-}
-.section-fathers{
-    background-color: rgba(210, 180, 140, 0.076);
-}
-.section-godparents{
-    background-color: rgba(210, 180, 140, 0.208);
+    font-style: italic;
+    color: var(--color-2);
+    padding: 15px 20px;
+    text-align: center;
+    background: rgba(210, 180, 140, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 .section-fathers h1, .section-fathers h2, .section-godparents h1, .section-godparents h2{
     font-size: 40px;
@@ -696,7 +700,7 @@ footer {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    opacity: 0.1;
+    opacity: 0.3;
     margin-top: 0;
 }
 
@@ -719,6 +723,66 @@ footer {
 .oculto {
     display: none;
 }
+#mensaje-flotante {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 12px;
+    padding: 8px 24px;
+    background: #D2B48C;
+    color: white;
+    font-family: var(--font-text);
+    font-style: italic;
+    font-size: 16px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    z-index: 12;
+    white-space: nowrap;
+    opacity: 0;
+    animation: entradaFlotante 1s ease-out forwards, flotanteBrillo 1.5s infinite alternate;
+}
+
+.iconito {
+    display: inline-block;
+    animation: iconitoAnimado 1s infinite alternate;
+}
+
+@keyframes flotanteBrillo {
+    from { box-shadow: 0 0 8px rgba(210,180,140,0.6); }
+    to { box-shadow: 0 0 12px rgba(210,180,140,1); }
+}
+
+@keyframes iconitoAnimado {
+    from { transform: translateY(0); }
+    to { transform: translateY(-5px); }
+}
+
+@keyframes entradaFlotante {
+    from { opacity: 0; transform: translate(-50%, 10px); }
+    to { opacity: 1; transform: translate(-50%, 0); }
+}
+.cita-biblica {
+    font-family: var(--font-text);
+    font-style: italic;
+    font-size: 24px;
+    color: var(--color-2);
+    padding: 15px 20px;
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+    background: rgba(210, 180, 140, 0.1); /* Fondo suave opcional */
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.cita-biblica strong {
+    display: block;
+    margin-top: 8px;
+    font-style: normal;
+    font-weight: 600;
+}
+
 
 /* Media Queries */
 @media (min-width: 768px) and (max-width: 1024px) {

@@ -23,7 +23,15 @@
     <div id="envelope">
         <div id="envelope-top"></div>
         <div id="seal">
-            <h2 class="fade-in-element visible" style="transition-delay: 0s;">Mi Bautizo (toca para ingresar)</h2>
+            <div id="seal">
+                <div class="seal-contenido">
+                  <h2 class="fade-in-element visible" style="transition-delay: 0s;">Mi Bautizo</h2>
+                  <p id="mensaje-flotante">
+                    Haz click para abrir la invitación 
+                    <span class="iconito">👆</span>
+                  </p>
+                </div>
+              </div>
         </div>
         <div id="envelope-bottom"></div>
     </div>
@@ -72,12 +80,13 @@
         </div>  
         <!-- Música de fondo -->
         <div class="section-music fade-in-element">
-            <h2>"Photograph - Ed Sheran"</h2>
-          <audio id="musica" controls loop>
-            <source src="/videoplayback (2).webm" type="audio/mpeg">
-             Tu navegador no soporta la reproducción de audio.
-          </audio>
+            <h2>"Photograph - Ed Sheeran"</h2>
+            <audio id="musica" controls loop>
+                <source src="/Ed Sheeran - Photograph (PianoCello Cover) - Brooklyn Duo.mp3" type="audio/mpeg">
+                Tu navegador no soporta la reproducción de audio.
+            </audio>              
         </div>   
+        
         <!--div cerezo-->
         <div class="section-cerezo"></div>
 
@@ -186,6 +195,11 @@
       <div class="section fade-in-element">
         <img src="/imagenes/bebe-lenador.png" alt="Foto del bebe" width="100%" loading="lazy">
     </div>
+            <!-- Cita bíblica -->
+            <div class="cita-biblica fade-in-element">
+                “Por tanto, id, y haced discípulos a todas las naciones, bautizándolos en el nombre del Padre, y del Hijo, y del Espíritu Santo; enseñándoles que guarden todas las cosas que os he mandado”
+                <strong>– Mateo 28:19-20</strong>
+              </div>
          <!--Regalo-->
          <div class="section-regalo fade-in-element">
             <lord-icon
@@ -210,64 +224,51 @@
         </div>
         <!--div cerezo-->
        <!-- Galería de Fotos -->
-       <!-- Galería de Fotos -->
-<div class="section fade-in-element">
+      <div class="section fade-in-element">
     <h2>Galería</h2>
 
     <!-- Vista de carpetas -->
     <div class="galeria-carpetas">
         <div class="carpeta" onclick="mostrarCategoria('bebe')">
-            <img src="/imagenes/bebe.png" alt="bebe" loading="lazy">
-            <span>De Bebé</span>
+            <img src="/imagenes/bebe/bebe.png" alt="bebe" loading="lazy">
         </div>
         <div class="carpeta" onclick="mostrarCategoria('cotidianidad')">
-            <img src="/imagenes/cotidianidad.png" alt="cotidianidad" loading="lazy">
-            <span>Mi cotidianidad</span>
+            <img src="/imagenes/cotidianidad/cotidianidad.png" alt="cotidianidad" loading="lazy">
         </div>
         <div class="carpeta" onclick="mostrarCategoria('mickey')">
-            <img src="/imagenes/mickey.png" alt="mickey" loading="lazy">
-            <span>Disfrazado de Mickey</span>
+            <img src="/imagenes/mickey/mickey.png" alt="mickey" loading="lazy">
         </div>
         <div class="carpeta" onclick="mostrarCategoria('patodonald')">
-            <img src="/imagenes/patodonald.png" alt="patodonald" loading="lazy">
-            <span>Disfrazado de Pato Donald</span>
+            <img src="/imagenes/patodonald/pd1.png" alt="patodonald" loading="lazy">
         </div>
     </div>
 
     <!-- Contenedor galería -->
     <div class="galeria oculto" id="galeria-bebe">
-        <img src="/imagenes/bebe.png" alt="Foto ceremonia 1" class="galeria-imagen" onclick="changePhoto(this)" loading="lazy">
-        <img src="/imagenes/b1.png" alt="Foto ceremonia 2" class="galeria-imagen" onclick="changePhoto(this)" loading="lazy">
-        <img src="/imagenes/b2.png" alt="Foto ceremonia 2" class="galeria-imagen" onclick="changePhoto(this)" loading="lazy">
-        <img src="/imagenes/b3.png" alt="Foto ceremonia 2" class="galeria-imagen" onclick="changePhoto(this)" loading="lazy">
-        <img src="/imagenes/b4.png" alt="Foto ceremonia 2" class="galeria-imagen" onclick="changePhoto(this)" loading="lazy">
+        <img src="/imagenes/bebe/b1.png" alt="Foto ceremonia 1" class="galeria-imagen" onclick="changePhoto(this)" loading="lazy">
+        <img src="/imagenes/bebe/b3.png" alt="Foto ceremonia 1" class="galeria-imagen" onclick="changePhoto(this)" loading="lazy">
+        <img src="/imagenes/bebe/b4.png" alt="Foto ceremonia 1" class="galeria-imagen" onclick="changePhoto(this)" loading="lazy">
     </div>
 
     <div class="galeria oculto" id="galeria-cotidianidad">
-        <img src="/imagenes/cotidianidad.png" alt="Foto ceremonia 1" class="galeria-imagen" onclick="changePhoto(this)" loading="lazy">
-        <img src="/imagenes/c1.png" alt="Foto ceremonia 2" class="galeria-imagen" onclick="changePhoto(this)" loading="lazy">
-        <img src="/imagenes/c2.png" alt="Foto ceremonia 2" class="galeria-imagen" onclick="changePhoto(this)" loading="lazy">
-        <img src="/imagenes/c3.png" alt="Foto ceremonia 2" class="galeria-imagen" onclick="changePhoto(this)" loading="lazy">
-        <img src="/imagenes/c4.png" alt="Foto ceremonia 2" class="galeria-imagen" onclick="changePhoto(this)" loading="lazy">
+        <img src="/imagenes/cotidianidad/c1.png" alt="Foto ceremonia 2" class="galeria-imagen" onclick="changePhoto(this)" loading="lazy">
+        <img src="/imagenes/cotidianidad/c2.png" alt="Foto ceremonia 2" class="galeria-imagen" onclick="changePhoto(this)" loading="lazy">
+        <img src="/imagenes/cotidianidad/c3.png" alt="Foto ceremonia 2" class="galeria-imagen" onclick="changePhoto(this)" loading="lazy">
+        <img src="/imagenes/cotidianidad/c4.png" alt="Foto ceremonia 2" class="galeria-imagen" onclick="changePhoto(this)" loading="lazy">
     </div>
 
     <div class="galeria oculto" id="galeria-mickey">
-        <img src="/imagenes/mickey.png" alt="Foto recepción 1" class="galeria-imagen" onclick="changePhoto(this)" loading="lazy">
-        <img src="/imagenes/m1.png" alt="Foto recepción 2" class="galeria-imagen" onclick="changePhoto(this)" loading="lazy">
-        <img src="/imagenes/m2.png" alt="Foto recepción 2" class="galeria-imagen" onclick="changePhoto(this)" loading="lazy">
-        <img src="/imagenes/m3.png" alt="Foto recepción 2" class="galeria-imagen" onclick="changePhoto(this)" loading="lazy">
-        <img src="/imagenes/m4.png" alt="Foto recepción 2" class="galeria-imagen" onclick="changePhoto(this)" loading="lazy">
+        <img src="/imagenes/mickey/m1.png" alt="Foto recepción 1" class="galeria-imagen" onclick="changePhoto(this)" loading="lazy">
+        <img src="/imagenes/mickey/m2.png" alt="Foto recepción 1" class="galeria-imagen" onclick="changePhoto(this)" loading="lazy">
+        <img src="/imagenes/mickey/m3.png" alt="Foto recepción 1" class="galeria-imagen" onclick="changePhoto(this)" loading="lazy">
     </div>
 
     <div class="galeria oculto" id="galeria-patodonald">
-        <img src="/imagenes/patodonald.png" alt="Foto familia 1" class="galeria-imagen" onclick="changePhoto(this)" loading="lazy">
-        <img src="/imagenes/pd1.png" alt="Foto familia 2" class="galeria-imagen" onclick="changePhoto(this)" loading="lazy">
-        <img src="/imagenes/pd2.png" alt="Foto familia 2" class="galeria-imagen" onclick="changePhoto(this)" loading="lazy">
-        <img src="/imagenes/pd3.png" alt="Foto familia 2" class="galeria-imagen" onclick="changePhoto(this)" loading="lazy">
-        <img src="/imagenes/pd4.png" alt="Foto familia 2" class="galeria-imagen" onclick="changePhoto(this)" loading="lazy">
+        <img src="/imagenes/patodonald/pd2.png" alt="Foto familia 1" class="galeria-imagen" onclick="changePhoto(this)" loading="lazy">
+        <img src="/imagenes/patodonald/pd3.png" alt="Foto familia 1" class="galeria-imagen" onclick="changePhoto(this)" loading="lazy">
+        <img src="/imagenes/patodonald/pd4.png" alt="Foto familia 1" class="galeria-imagen" onclick="changePhoto(this)" loading="lazy">
     </div>
-</div>
-
+      </div>
         <!-- Modal para visualización de fotos -->
         <div id="photo-modal" class="photo-modal" onclick="closeModal(event)">
             <span class="close" onclick="closeModal()">&times;</span>
