@@ -125,7 +125,8 @@ if (invitadoId === '105') {
         '109': { nombre: 'Carlos Sejias', pases: 1 },
         '110': { nombre: 'Adriana Paiz', pases: 1 },
         '111': { nombre: 'Lorena Ávila, vda. De Juárez', pases: 1 },
-        '112': { nombre: 'Nydia Pérez e hijos', pases: 3 }
+        '112': { nombre: 'Nydia Pérez e hijos', pases: 3 },
+        '113': { nombre: 'Norbert Otzoy y familia'}
     };    
 
     const invitado = invitados[invitadoId];
@@ -135,7 +136,7 @@ if (invitadoId === '105') {
 
         const pasesElement = document.getElementById('cantidadPases');
 
-        if (invitadoId === '106' || invitadoId === '107') {
+        if (invitadoId === '106' || invitadoId === '107'|| invitadoId === '113') {
             if (pasesElement) {
                 pasesElement.style.display = 'none';  // Oculta el h3 de los pases
             }
@@ -266,7 +267,8 @@ function confirmarAsistencia(destinatario, numeroTelefono) {
         '109': { nombre: 'Carlos Sejias', pases: 1 },
         '110': { nombre: 'Adriana Paiz', pases: 1 },
         '111': { nombre: 'Lorena Ávila, vda. De Juárez', pases: 1 },
-        '112': { nombre: 'Nydia Pérez e hijos', pases: 3 }
+        '112': { nombre: 'Nydia Pérez e hijos', pases: 3 },
+        '113': { nombre: 'Norbert Otzoy y familia'}
     };
 
     let mensaje = "";
@@ -284,11 +286,11 @@ else if (invitadoId && invitados[invitadoId]) {
     const pases = invitadoData.pases;
 
     // Mostrar pases excepto en los simbólicos
-    if (invitadoId !== '106' && invitadoId !== '107') {
+    if (invitadoId !== '106' && invitadoId !== '107' && invitadoId !== '113') {
         document.getElementById('cantidadPases').innerText = `Pases: ${pases}`;
     }
 
-    if (invitadoId === '106' || invitadoId === '107') {
+    if (invitadoId === '106' || invitadoId === '107' || invitadoId === '113') {
         mensaje = `Hola, somos ${invitado} y confirmamos nuestra asistencia al Bautizo de Thiago Xavier.`;
     } else {
         mensaje = `Hola, soy ${invitado} y confirmo mi asistencia con ${pases} ${pases === 1 ? 'pase' : 'pases'} al Bautizo de Thiago Xavier.`;
