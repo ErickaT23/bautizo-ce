@@ -240,27 +240,27 @@ function confirmarAsistencia(destinatario, numeroTelefono) {
 
     let mensaje = "";
 
-    if (invitadoId === '105') {
-        mensaje = `Confirmo mi asistencia al Bautizo de Thiago Xavier.`;
-        
-        document.getElementById('confirmacion').innerText = 
-            "Su presencia es muy importante para nosotros y por razones de protocolo y organización, es necesaria su confirmación lo antes posible o bien indicarnos si esta vez no podrán acompañarnos.";
-    } 
-    else if (invitadoId && invitados[invitadoId]) {
-        const invitadoData = invitados[invitadoId];
-        const invitado = invitadoData.nombre;
-        const pases = invitadoData.pases;
+if (invitadoId === '105') {
+    mensaje = `Confirmo mi asistencia al Bautizo de Thiago Xavier.`;
 
-        mensaje = `Hola, soy ${invitado} y confirmo mi asistencia con ${pases} ${pases === 1 ? 'pase' : 'pases'} al Bautizo de Thiago.`;
+    document.getElementById('confirmacion').innerText = 
+        "Su presencia es muy importante para nosotros y por razones de protocolo y organización, es necesaria su confirmación lo antes posible o bien indicarnos si esta vez no podrán acompañarnos.";
+} 
+else if (invitadoId && invitados[invitadoId]) {
+    const invitadoData = invitados[invitadoId];
+    const invitado = invitadoData.nombre;
+    const pases = invitadoData.pases;
 
-        document.getElementById('confirmacion').innerText = "¡Gracias por confirmar!";
-    } 
-    else {
-        alert('Invitado no encontrado.');
-        return;
-    }
+    mensaje = `Hola, soy ${invitado} y confirmo mi asistencia con ${pases} ${pases === 1 ? 'pase' : 'pases'} al Bautizo de Thiago.`;
 
-    const enlaceWhatsapp = `https://api.whatsapp.com/send?phone=${numeroTelefono}&text=${encodeURIComponent(mensaje)}`;
-    window.open(enlaceWhatsapp, '_blank');
+    document.getElementById('confirmacion').innerText = "¡Gracias por confirmar!";
+} 
+else {
+    alert('Invitado no encontrado.');
+    return;
+}
+
+const enlaceWhatsapp = `https://api.whatsapp.com/send?phone=${numeroTelefono}&text=${encodeURIComponent(mensaje)}`;
+window.open(enlaceWhatsapp, '_blank');
 }
 
