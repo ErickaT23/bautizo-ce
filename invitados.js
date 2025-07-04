@@ -118,7 +118,10 @@ if (invitadoId === '105') {
         '101': { nombre: 'Allen Sequén, esposa e hijos', pases: 4 },
         '102': { nombre: 'Marco Tulio Álvarez, esposa e hijo', pases: 3 },
         '103': { nombre: 'Joseph Otzoy, esposa e hijos', pases: 4 },
-        '104': { nombre: 'Marco Álvarez, esposa e hijo', pases: 3 }
+        '104': { nombre: 'Marco Álvarez, esposa e hijo', pases: 3 },
+        '106': { nombre: 'Queridos Padrinos e hijas '},
+        '107': { nombre: 'Jahiro, Josh y Jaimie'},
+        '108': { nombre: 'Jennifer Álvarez e hija', pases: 2 }
     };    
 
     const invitado = invitados[invitadoId];
@@ -240,7 +243,10 @@ function confirmarAsistencia(destinatario, numeroTelefono) {
         '101': { nombre: 'Allen Sequén, esposa e hijos', pases: 4 },
         '102': { nombre: 'Marco Tulio Álvarez, esposa e hijo', pases: 3 },
         '103': { nombre: 'Joseph Otzoy, esposa e hijos', pases: 4 },
-        '104': { nombre: 'Marco Álvarez, esposa e hijo', pases: 3 }
+        '104': { nombre: 'Marco Álvarez, esposa e hijo', pases: 3 },
+        '106': { nombre: 'Queridos Padrinos e hijas '},
+        '107': { nombre: 'Jahiro, Josh y Jaimie'},
+        '108': { nombre: 'Jennifer Álvarez e hija', pases: 2 }
     };
 
     let mensaje = "";
