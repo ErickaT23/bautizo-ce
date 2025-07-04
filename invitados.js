@@ -253,7 +253,7 @@ function confirmarAsistencia(destinatario, numeroTelefono) {
     const invitado = invitadoData.nombre;
     const pases = invitadoData.pases;
 
-    const mensaje = `Hola, soy ${invitado} y confirmo mi asistencia con ${pases} ${pases === 1 ? 'pase' : 'pases'} al Bautizo de Thiago. Enviado por: ${destinatario}.`;
+    const mensaje = `Hola, soy ${invitado} y confirmo mi asistencia con ${pases} ${pases === 1 ? 'pase' : 'pases'} al Bautizo de Thiago.`;
 
     const enlaceWhatsapp = `https://api.whatsapp.com/send?phone=${numeroTelefono}&text=${encodeURIComponent(mensaje)}`;
     window.open(enlaceWhatsapp, '_blank');
