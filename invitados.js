@@ -113,7 +113,8 @@ function cargarDatosInvitado() {
         '101': { nombre: 'Allen Sequén, esposa e hijos', pases: 4 },
         '102': { nombre: 'Marco Tulio Álvarez, esposa e hijo', pases: 3 },
         '103': { nombre: 'Joseph Otzoy, esposa e hijos', pases: 4 },
-        '104': { nombre: 'Marco Álvarez, esposa e hijo', pases: 3 }
+        '104': { nombre: 'Marco Álvarez, esposa e hijo', pases: 3 },
+        '105': { nombre: '', pases: 0  }
     };    
 
     const invitado = invitados[invitadoId];
@@ -130,11 +131,6 @@ function cargarDatosInvitado() {
 function confirmarAsistencia(destinatario, numeroTelefono) {
     const params = new URLSearchParams(window.location.search);
     const invitadoId = params.get('id');
-
-    if (!invitadoId) {
-        alert('ID de invitado no encontrado en el enlace.');
-        return;
-    }
 
     const invitados = {
         '1': { nombre: 'Abuelito Marvin', pases: 1 },
@@ -240,23 +236,33 @@ function confirmarAsistencia(destinatario, numeroTelefono) {
         '101': { nombre: 'Allen Sequén, esposa e hijos', pases: 4 },
         '102': { nombre: 'Marco Tulio Álvarez, esposa e hijo', pases: 3 },
         '103': { nombre: 'Joseph Otzoy, esposa e hijos', pases: 4 },
-        '104': { nombre: 'Marco Álvarez, esposa e hijo', pases: 3 }
+        '104': { nombre: 'Marco Álvarez, esposa e hijo', pases: 3 },
+        '105': { nombre: '', pases: 0  }
     };
 
-    const invitadoData = invitados[invitadoId];
+    let mensaje = "";
 
-    if (!invitadoData) {
+    if (invitadoId === '105') {
+        mensaje = `Confirmo mi asistencia al Bautizo de Thiago Xavier.`;
+        
+        document.getElementById('confirmacion').innerText = 
+            "Su presencia es muy importante para nosotros y por razones de protocolo y organización, es necesaria su confirmación lo antes posible o bien indicarnos si esta vez no podrán acompañarnos.";
+    } 
+    else if (invitadoId && invitados[invitadoId]) {
+        const invitadoData = invitados[invitadoId];
+        const invitado = invitadoData.nombre;
+        const pases = invitadoData.pases;
+
+        mensaje = `Hola, soy ${invitado} y confirmo mi asistencia con ${pases} ${pases === 1 ? 'pase' : 'pases'} al Bautizo de Thiago.`;
+
+        document.getElementById('confirmacion').innerText = "¡Gracias por confirmar!";
+    } 
+    else {
         alert('Invitado no encontrado.');
         return;
     }
 
-    const invitado = invitadoData.nombre;
-    const pases = invitadoData.pases;
-
-    const mensaje = `Hola, soy ${invitado} y confirmo mi asistencia con ${pases} ${pases === 1 ? 'pase' : 'pases'} al Bautizo de Thiago.`;
-
     const enlaceWhatsapp = `https://api.whatsapp.com/send?phone=${numeroTelefono}&text=${encodeURIComponent(mensaje)}`;
     window.open(enlaceWhatsapp, '_blank');
-
-    document.getElementById('confirmacion').innerText = "¡Gracias por confirmar!";
 }
+
