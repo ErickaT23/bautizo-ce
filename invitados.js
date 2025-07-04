@@ -113,8 +113,7 @@ function cargarDatosInvitado() {
         '101': { nombre: 'Allen Sequén, esposa e hijos', pases: 4 },
         '102': { nombre: 'Marco Tulio Álvarez, esposa e hijo', pases: 3 },
         '103': { nombre: 'Joseph Otzoy, esposa e hijos', pases: 4 },
-        '104': { nombre: 'Marco Álvarez, esposa e hijo', pases: 3 },
-        '105': { nombre: '', pases: 0  }
+        '104': { nombre: 'Marco Álvarez, esposa e hijo', pases: 3 }
     };    
 
     const invitado = invitados[invitadoId];
@@ -236,8 +235,7 @@ function confirmarAsistencia(destinatario, numeroTelefono) {
         '101': { nombre: 'Allen Sequén, esposa e hijos', pases: 4 },
         '102': { nombre: 'Marco Tulio Álvarez, esposa e hijo', pases: 3 },
         '103': { nombre: 'Joseph Otzoy, esposa e hijos', pases: 4 },
-        '104': { nombre: 'Marco Álvarez, esposa e hijo', pases: 3 },
-        '105': { nombre: '', pases: 0  }
+        '104': { nombre: 'Marco Álvarez, esposa e hijo', pases: 3 }
     };
 
     let mensaje = "";
