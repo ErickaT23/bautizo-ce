@@ -263,10 +263,21 @@ else if (invitadoId && invitados[invitadoId]) {
     const invitado = invitadoData.nombre;
     const pases = invitadoData.pases;
 
-    mensaje = `Hola, soy ${invitado} y confirmo mi asistencia con ${pases} ${pases === 1 ? 'pase' : 'pases'} al Bautizo de Thiago.`;
+    // Mostrar pases excepto en los simbólicos
+    if (invitadoId !== '106' && invitadoId !== '107') {
+        document.getElementById('cantidadPases').innerText = `Pases: ${pases}`;
+    }
+
+    if (invitadoId === '106' || invitadoId === '107') {
+        mensaje = `Hola, somos ${invitado} y confirmamos nuestra asistencia al Bautizo de Thiago Xavier.`;
+    } else {
+        mensaje = `Hola, soy ${invitado} y confirmo mi asistencia con ${pases} ${pases === 1 ? 'pase' : 'pases'} al Bautizo de Thiago Xavier.`;
+    }
 
     document.getElementById('confirmacion').innerText = "¡Gracias por confirmar!";
-} 
+}
+
+
 else {
     alert('Invitado no encontrado.');
     return;
