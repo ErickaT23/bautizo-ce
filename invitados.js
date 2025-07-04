@@ -8,6 +8,11 @@ function cargarDatosInvitado() {
         return;
     }
 
+    // Aquí antes de seguir buscando el invitado, sáltate el alert si es el 105
+if (invitadoId === '105') {
+    return; // No hagas nada más, ni busques en el listado
+}
+
     // Base de datos simulada
     const invitados = {
         '1': { nombre: 'Abuelito Marvin', pases: 1 },
