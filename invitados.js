@@ -243,8 +243,9 @@ function confirmarAsistencia(destinatario, numeroTelefono) {
 if (invitadoId === '105') {
     mensaje = `Confirmo mi asistencia al Bautizo de Thiago Xavier.`;
 
-    document.getElementById('confirmacion').innerText = 
-        "Su presencia es muy importante para nosotros y por razones de protocolo y organización, es necesaria su confirmación lo antes posible o bien indicarnos si esta vez no podrán acompañarnos.";
+    document.getElementById('texto-confirmacion').innerText = 
+    "Su presencia es muy importante para nosotros y por razones de protocolo y organización, es necesaria su confirmación lo antes posible o bien indicarnos si esta vez no podrán acompañarnos.";
+
 } 
 else if (invitadoId && invitados[invitadoId]) {
     const invitadoData = invitados[invitadoId];
