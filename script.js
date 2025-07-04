@@ -36,7 +36,17 @@ document.addEventListener("DOMContentLoaded", function () {
     // Iniciar contador y cargar datos del invitado al cargar la página
     iniciarContador();
     cargarDatosInvitado();
+
+    // 👇 Aquí agregas esto 👇
+    const params = new URLSearchParams(window.location.search);
+    const invitadoId = params.get('id');
+
+    if (invitadoId === '105') {
+        document.getElementById('texto-confirmacion').innerText = 
+            "Su presencia es muy importante para nosotros y por razones de protocolo y organización, es necesaria su confirmación lo antes posible o bien indicarnos si esta vez no podrán acompañarnos.";
+    }
 });
+
 
 // Función para iniciar el contador de la fecha del evento
 function iniciarContador() {
