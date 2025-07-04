@@ -128,7 +128,19 @@ if (invitadoId === '105') {
 
     if (invitado) {
         document.getElementById('nombreInvitado').innerText = invitado.nombre;
-        document.getElementById('cantidadPases').innerText = `Pases: ${invitado.pases}`;
+
+        const pasesElement = document.getElementById('cantidadPases');
+
+        if (invitadoId === '106' || invitadoId === '107') {
+            if (pasesElement) {
+                pasesElement.style.display = 'none';  // Oculta el h3 de los pases
+            }
+        } else {
+            if (pasesElement) {
+                pasesElement.style.display = 'block';  // Asegura que se muestre para otros
+                pasesElement.innerText = `Pases: ${invitado.pases}`;
+            }
+        }
     } else {
         alert('Invitado no encontrado.');
     }
@@ -275,11 +287,6 @@ else if (invitadoId && invitados[invitadoId]) {
     }
 
     document.getElementById('confirmacion').innerText = "¡Gracias por confirmar!";
-}
-
-const pasesDiv = document.getElementById('cantidadPases');
-if (pasesDiv && invitadoId !== '106' && invitadoId !== '107') {
-    pasesDiv.innerText = `Pases: ${pases}`;
 }
 
 
