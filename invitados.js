@@ -131,7 +131,8 @@ if (invitadoId === '105') {
         '115': { nombre: 'Karina Elias', pases: 2 },
         '116': { nombre: 'Johana Rossatti e hijos', pases: 4 }, 
         '117': { nombre: 'Bety Chávez e hija', pases: 2 }, 
-        '118': { nombre: 'Claudia Ixen', pases: 2 }
+        '118': { nombre: 'Claudia Ixen', pases: 2 },
+        '119': { nombre: 'Moisés Sajbochol', pases: 2 }
     };    
 
     const invitado = invitados[invitadoId];
@@ -278,7 +279,8 @@ function confirmarAsistencia(destinatario, numeroTelefono) {
         '115': { nombre: 'Karina Elias', pases: 2 }, 
         '116': { nombre: 'Johana Rossatti e hijos', pases: 4 },
         '117': { nombre: 'Bety Chávez e hija', pases: 2 }, 
-        '118': { nombre: 'Claudia Ixen', pases: 2 }
+        '118': { nombre: 'Claudia Ixen', pases: 2 },
+        '119': { nombre: 'Moisés Sajbochol', pases: 2 }
     };
 
     let mensaje = "";
