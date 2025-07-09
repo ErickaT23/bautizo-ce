@@ -132,8 +132,10 @@ if (invitadoId === '105') {
         '116': { nombre: 'Johana Rossatti e hijos', pases: 4 }, 
         '117': { nombre: 'Bety Chávez e hija', pases: 2 }, 
         '118': { nombre: 'Claudia Ixen', pases: 2 },
-        '119': { nombre: 'Moisés Sajbochol', pases: 2 }
-    };    
+        '119': { nombre: 'Moisés Sajbochol', pases: 2 },
+        '120': { nombre: 'Grecia Ruiz', pases: 2 },
+        '121': { nombre: 'Aida Santizo', pases: 2 }
+    };  
 
     const invitado = invitados[invitadoId];
 
@@ -280,7 +282,9 @@ function confirmarAsistencia(destinatario, numeroTelefono) {
         '116': { nombre: 'Johana Rossatti e hijos', pases: 4 },
         '117': { nombre: 'Bety Chávez e hija', pases: 2 }, 
         '118': { nombre: 'Claudia Ixen', pases: 2 },
-        '119': { nombre: 'Moisés Sajbochol', pases: 2 }
+        '119': { nombre: 'Moisés Sajbochol', pases: 2 },
+        '120': { nombre: 'Grecia Ruiz', pases: 2 },
+        '121': { nombre: 'Aida Santizo', pases: 2 }
     };
 
     let mensaje = "";
