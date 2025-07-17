@@ -291,7 +291,7 @@ function confirmarAsistencia(destinatario, numeroTelefono) {
 
     let mensaje = "";
 
-if (invitadoId === '105' && invitadoId !== '122') {
+if (invitadoId === '105' && invitadoId == '122') {
     mensaje = `Confirmo mi asistencia al Bautizo de Thiago Xavier.`;
 
     document.getElementById('texto-confirmacion').innerText = 
