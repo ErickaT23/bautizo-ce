@@ -291,13 +291,21 @@ function confirmarAsistencia(destinatario, numeroTelefono) {
 
     let mensaje = "";
 
-if (invitadoId === '105' && invitadoId == '122') {
+if (invitadoId === '105') {
     mensaje = `Confirmo mi asistencia al Bautizo de Thiago Xavier.`;
 
     document.getElementById('texto-confirmacion').innerText = 
     "Su presencia es muy importante para nosotros y por razones de protocolo y organización, es necesaria su confirmación lo antes posible o bien indicarnos si esta vez no podrán acompañarnos.";
 
 } 
+if (invitadoId === '122') {
+    // Mostrar nombre y pases normalmente
+    // Solo cambiar mensaje
+    mensaje = `Confirmo mi asistencia al Bautizo de Thiago Xavier.`;
+
+    document.getElementById('texto-confirmacion').innerText = 
+    "Su presencia es muy importante para nosotros y por razones de protocolo y organización, es necesaria su confirmación lo antes posible o bien indicarnos si esta vez no podrán acompañarnos.";
+}
 else if (invitadoId && invitados[invitadoId]) {
     const invitadoData = invitados[invitadoId];
     const invitado = invitadoData.nombre;
