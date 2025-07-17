@@ -324,10 +324,15 @@ else {
     return;
 }
 
-if (['122', '70', '71'].includes(invitadoId)) {
-    document.getElementById('texto-confirmacion').innerText = 
-    "Su presencia es muy importante para nosotros y por razones de protocolo y organización, es necesaria su confirmación lo antes posible o bien indicarnos si esta vez no podrán acompañarnos.";
-}
+// 👇🏻 Agregás esto justo antes de abrir el WhatsApp
+setTimeout(() => {
+    if (['122', '70', '71'].includes(invitadoId)) {
+        const parrafo = document.getElementById('texto-confirmacion');
+        if (parrafo) {
+            parrafo.innerText = "Su presencia es muy importante para nosotros y por razones de protocolo y organización, es necesaria su confirmación lo antes posible o bien indicarnos si esta vez no podrán acompañarnos.";
+        }
+    }
+}, 0);
 
 const enlaceWhatsapp = `https://api.whatsapp.com/send?phone=${numeroTelefono}&text=${encodeURIComponent(mensaje)}`;
 window.open(enlaceWhatsapp, '_blank');
