@@ -298,10 +298,6 @@ if (invitadoId === '105') {
     "Su presencia es muy importante para nosotros y por razones de protocolo y organización, es necesaria su confirmación lo antes posible o bien indicarnos si esta vez no podrán acompañarnos.";
 
 } 
-if (['122', '70', '71'].includes(invitadoId)) {
-    document.getElementById('texto-confirmacion').innerText = 
-    "Su presencia es muy importante para nosotros y por razones de protocolo y organización, es necesaria su confirmación lo antes posible o bien indicarnos si esta vez no podrán acompañarnos.";
-}
 
 else if (invitadoId && invitados[invitadoId]) {
     const invitadoData = invitados[invitadoId];
@@ -326,6 +322,11 @@ else if (invitadoId && invitados[invitadoId]) {
 else {
     alert('Invitado no encontrado.');
     return;
+}
+
+if (['122', '70', '71'].includes(invitadoId)) {
+    document.getElementById('texto-confirmacion').innerText = 
+    "Su presencia es muy importante para nosotros y por razones de protocolo y organización, es necesaria su confirmación lo antes posible o bien indicarnos si esta vez no podrán acompañarnos.";
 }
 
 const enlaceWhatsapp = `https://api.whatsapp.com/send?phone=${numeroTelefono}&text=${encodeURIComponent(mensaje)}`;
