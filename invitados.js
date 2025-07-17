@@ -134,7 +134,8 @@ if (invitadoId === '105') {
         '118': { nombre: 'Claudia Ixen', pases: 2 },
         '119': { nombre: 'Moisés Sajbochol', pases: 2 },
         '120': { nombre: 'Grecia Ruiz', pases: 2 },
-        '121': { nombre: 'Aida Santizo', pases: 2 }
+        '121': { nombre: 'Aida Santizo', pases: 2 },
+        '122': { nombre: 'Sandra González y familia', pases: 2 }
     };  
 
     const invitado = invitados[invitadoId];
@@ -284,12 +285,13 @@ function confirmarAsistencia(destinatario, numeroTelefono) {
         '118': { nombre: 'Claudia Ixen', pases: 2 },
         '119': { nombre: 'Moisés Sajbochol', pases: 2 },
         '120': { nombre: 'Grecia Ruiz', pases: 2 },
-        '121': { nombre: 'Aida Santizo', pases: 2 }
+        '121': { nombre: 'Aida Santizo', pases: 2 }, 
+        '122': { nombre: 'Sandra González y familia', pases: 2 }
     };
 
     let mensaje = "";
 
-if (invitadoId === '105') {
+if (invitadoId === '105' && invitadoId !== '122') {
     mensaje = `Confirmo mi asistencia al Bautizo de Thiago Xavier.`;
 
     document.getElementById('texto-confirmacion').innerText = 
