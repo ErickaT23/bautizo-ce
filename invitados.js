@@ -136,7 +136,8 @@ if (invitadoId === '105') {
         '120': { nombre: 'Grecia Ruiz', pases: 2 },
         '121': { nombre: 'Aida Santizo', pases: 2 },
         '122': { nombre: 'Sandra González y familia', pases: 2 },
-        '123': { nombre: 'Roberto Galindo y esposa', pases: 3 } 
+        '123': { nombre: 'Roberto Galindo y esposa', pases: 3 }, 
+        '124': { nombre: 'Miguel Ángel Velásquez y esposa', pases: 2 } // Añadido para el invitado 105
     };  
 
     const invitado = invitados[invitadoId];
